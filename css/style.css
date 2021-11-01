@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#navbar {
+  display: flex;
+  height: 75px;
+}
+
+#logo {
+  width: 14.5%;
+  margin-left: 41px;
+}
+
+#logo > img {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+#searchbar {
+  margin-left: 36px;
+  padding-top: 16px;
+}
+
+#searchbar > input {
+  width: 674px;
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+#searchbar > input::placeholder {
+  font-size: 0.88rem;
+  padding-top: 1px;
+  padding-left: 8px;
+  color: #aaaaaa;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#searchbar > i {
+  position: absolute;
+  left: 902px;
+  padding-top: 7px;
+  font-size: 2rem;
+}
+
+#icon {
+  display: flex;
+  padding: 15px;
+  margin-left: 20px;
+  padding-bottom: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-right: 33px;
+  text-align: center;
+}
+
+.links > span {
+  font-size: 0.8rem;
+}
+
+.links .material-icons-outlined {
+  font-size: 1.7rem !important;
+}
+
+#category {
+  padding: 12.5px;
+  padding-left: 54px;
+  border-top: 1px solid #e7e7e7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#category > span {
+  padding-right: 55px;
+  font-size: 0.86rem;
+}
