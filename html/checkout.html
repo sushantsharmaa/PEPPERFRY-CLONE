@@ -1,12 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
 </head>
+<link rel="stylesheet" href="../css/checkout.css" />
+
+</head>
+<link rel="stylesheet" href="/priyanka/styles/styles.css" />
+
 <body>
-    <div>Hello</div>
+    <div id=checkout>
+        <div id="header">
+            <div id="img">
+                <img id="logo_size"
+                    src="data:image/png;base64,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" />
+            </div>
+
+            <div id="content">
+                <div id="logo">
+                    <img id="cart_logo"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTswlJrC8ZfOshcq4B6FrZTwm8dt3rLltp3TA&usqp=CAU" />
+                </div>
+                <div id="description">
+                    <span id="cart_color">Cart------ Delivery & Biling Address</span><span id="description_color">
+                        ------ Payment</span>
+                </div>
+            </div>
+            <div id="notification">
+                <div><strong>WELCOME <span id="capital">Name</span>!</strong></div>
+                <img id="notification_img"
+                    src="data:image/png;base64,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" />
+            </div>
+
+        </div>
+        <hr>
+        <div id="middle">
+            <div id="mid_left">
+                <div id="mid_left1">
+                    <div>ORDER SUMMERY</div>
+                    <div id="mid_left11">( <span id="count">0</span> Items)<span id="showitems"> +</span></div>
+                </div>
+                <div id="mid_left2">
+                    <div id="mid_left21">
+                        <div>SHIPPING & BILLING DETAILS</div>
+                        <div id="mid_left221">Tell Us Where To Deliver <span id="dash_style">-</span></div>
+                    </div>
+                    <div id="mid_left22">
+                        <div id="email"></div>
+                        <div id="shippingAddress">
+                            <form>
+                                <label class="label1">Name</label>
+                                <input type="text" id="name" name="name" placeholder="e.g Akshay Kumar" /><br><br><br>
+                                <div class="num">
+                                <label class="label2">Moblie Number</label>
+                                <input type="number" id="moblie" placeholder="95xxxxxxx2" />
+                                <img id="question_mark" src="https://ii1.pepperfry.com//images/svg/nCheckout-question-mark.svg" alt="" /> <span id="show"></span></div>
+                                
+                                <div id="moblie_valid"></div><br><br>
+                                <label class="label3">PinCode</label>
+                                <input type="number" id="pincode" placeholder="400059" /><br>
+                                <div id="pin_valid"></div><br><br>
+                                <label class="label4">Address</label>
+                                <input type="text" id="address"
+                                    placeholder="House Number, Building Name, Society, Area, Road, Landmark" /><br><br><br>
+                                <div id="mid_left2221">
+                                    <div id="city_part">
+                                        <input type="text" id="city" placeholder="City" />
+                                        <div id="city_valid"></div>
+                                    </div>
+                                    <div id="city_part">
+                                        <select id="state">
+                                            <option>Select State</option>
+                                            <option>Delhi</option>
+                                            <option>Maharashtra</option>
+                                            <option>Andhra Pradesh</option>
+                                            <option>Arunachal Pradesh</option>
+                                            <option>Assam</option>
+                                            <option>Bihar</option>
+                                            <option>Goa</option>
+                                            <option>Haryana</option>
+                                            <option>Himachal Pradesh</option>
+                                            <option>Jammu and Kashmir</option>
+                                            <option>Jharkhand</option>
+                                            <option>Karnataka</option>
+                                            <option>Kerala</option>
+                                            <option>Madhya Pradesh</option>
+                                            <option>Manipur</option>
+                                            <option>Meghalaya</option>
+                                            <option>Mizoram</option>
+                                            <option>Nagaland</option>
+                                            <option>Punjab</option>
+                                            <option>Rajasthan</option>
+                                            <option>Sikkim</option>
+                                            <option>Tamil Nadu</option>
+                                            <option>Tripura</option>
+                                            <option>West Bengal</option>
+                                            <option>Utter Pradesh</option>
+                                            <option>Chandigarh</option>
+                                            <option>Andaman and Nicobar Islands</option>
+                                            <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                                            <option>Telangana</option>
+                                            <option>Uttarakhand</option>
+                                            <option>Gujarat</option>
+                                            <option>Chhattisgarh</option>
+                                            <option>Punducherry</option>
+                                            <option>Odisha</option>
+                                            <option>Pundicherry</option>
+                                            <option>Lakshadweep</option>
+                                        </select>
+                                    
+                                    <div id="state_valid"></div>
+                                </div>
+                                </div>
+                                <br><br>
+                                <input type="text" id="country" placeholder="India" /><br><br>
+                                <div id="mid_left2222">
+                                    <input class="checkbox" type="checkbox" />
+                                    <div class="below_checkbox">Biling Address Is The Same As Shipping Address</div>
+                                </div>
+                                <br>
+                                <div id="mid_left2223">
+                                    <input class="checkbox" type="checkbox" />
+                                    <div class="below_checkbox">I Want To Sign Up</div>
+                                </div>
+                                <br><br>
+                                <!-- <input type="submit" id="submit" name="submit" value="SAVE & CONTINUE"/> -->
+                            </form>
+                            <button id="submit" onclick="verify()">SAVE & CONTINUE</button>
+                            <br><br><br>
+                        </div>
+                    </div>
+                </div>
+                <div id="mid_left3">
+                    <div id="mid_left31">PAYMENT</div>
+                    <div id="mid_left32">How Would You Like To Pay <spam id="PaymentMethod">+</spam>
+                    </div>
+                </div>
+            </div>
+            <div id="mid_right">
+
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer1">
+                <div id="f1">WE ACCEPT</div>
+                <div id="footer11">
+                    <div id="visa">
+                        <img src="https://ii2.pepperfry.com/images/new-visa-logo.png">
+                    </div>
+
+                    <div id="maestro">
+                        <img src="https://ii2.pepperfry.com/images/800-px-maestro-logosvg.png">
+                    </div>
+
+                    <div id="american">
+                        <img src="https://ii2.pepperfry.com/images/american-express-icon.png">
+                    </div>
+
+                    <div id="dc">
+                        <img src="https://ii2.pepperfry.com/images/d-i-n-e-r-s-c-a-r-d-1.png">
+                    </div>
+
+                    <div id="rupay">
+                        <img src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png">
+                    </div>
+
+                    <div id="mastercard">
+                        <img src="https://ii2.pepperfry.com/images/mastercard-logo-png.png">
+                    </div>
+
+                    <div id="wallet">
+                        <div>
+                            <img src="https://ii2.pepperfry.com/images/982-wallet.png">
+                        </div>
+                        <div class="f11">Wallet</div>
+                    </div>
+
+                    <div id="netbanking">
+                        <div>
+                            <img src="https://ii2.pepperfry.com/images/985-netbanking.png">
+                        </div>
+                        <div class="f11">Netbanking</div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer2">
+                <div id="f2">BUY SAFE, PAY EASY</div>
+                <div id="foot2">
+                    <div id="f21">
+                        <img src="https://ii1.pepperfry.com/images/svg/calendar-1.svg" />
+                    </div>
+                    <div id="f22">
+                        <spam>No Cost EMIs: </spam>Now pay in easy installments at no additional cost
+                    </div>
+                </div>
+            </div>
+            <div id="footer3">
+                <div id="f3">100% SAFE & SECURE</div>
+                <div id="foot3">
+                    <div id="f31">
+                        <img src="https://ii2.pepperfry.com/images/download-1.png">
+                    </div>
+                    <div id="f32">
+                        <img src="https://ii2.pepperfry.com/images/p-c-i-d-s-s.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="checkout.js"></script>
 </body>
+
 </html>
