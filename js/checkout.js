@@ -17,11 +17,15 @@ var name1 = document.getElementById("name");
     var num = "0123456789";
 
     function show() {
-        show1.innerText = "ojoo";
+        show1.innerText = "We'll keep in touch via updates to your order, and to plan the item's delivery with you";
         show1.style.backgroundColor = "black";
         show1.style.color = "white";
-        show1.style.width = "40px";
-        show1.style.height = "40px";
+        show1.style.width = "25%";
+        show1.style.height = "5%";
+        show1.style.fontSize = "12px";
+        show1.style.margin = "1% 5% 1% 70%";
+        // show1.style.overflow = "scroll";
+
     }
     function hide() {
         show1.innerText = "";

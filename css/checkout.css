@@ -1,6 +1,11 @@
+body{
+    font-family: 'Fira Sans',sans-serif;
+}
 #checkout {
     width: 100%;
     margin: auto;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
 }
 
 #logo_size {
@@ -61,7 +66,7 @@ hr {
     height: 900PX;
     /* background-color: blue; */
     display: grid;
-    grid-template-rows: 6% 82% 6%;
+    grid-template-rows: 5% 95%;
 }
 
 #mid_right {
@@ -74,7 +79,7 @@ hr {
 #mid_left1 {
     /* height: 50px; */
     background-color: rgb(228, 229, 230);
-    padding: 10px 0 5px 0;
+    padding: 5px 0 5px 0;
     border: 1px solid rgb(231, 231, 231);
     margin: 0 0 2px 0;
     display: grid;
@@ -116,13 +121,13 @@ hr {
 }
 
 #footer {
-    height: 29%;
-    margin-top: 10px;
+    height: 10%;
+    padding: 5% 0 0 10%;
     border: 1px solid rgb(231, 231, 231);
     background-color: rgb(228, 229, 230);
     padding: 20px 20px 20px 20px;
     display: grid;
-    grid-template-columns: 35% 45% 20%;
+    grid-template-columns: 35% 40% 20%;
     justify-content: center;
 
 }
@@ -130,6 +135,7 @@ hr {
 #footer1 {
     height: 100%;
     /* background-color: violet; */
+    padding: 0 0 0 15%;
 
 }
 
@@ -153,6 +159,7 @@ hr {
 #footer4{
     width: 100%;
     padding-left: 500px;
+    padding-top: 10%;
     color: rgb(150, 148, 148);
 }
 
@@ -253,7 +260,7 @@ form {
     width: 50px;
     font-size: 17px;
     padding-right: 135px;
-    color: rgb(150, 150, 150);
+    color: rgb(175, 151, 151);
 }
 
 #city,
@@ -264,8 +271,10 @@ form {
 option {
     width: 400px;
     height: 20px;
+    padding: 1%;
     font-size: 15px;
     color: black;
+    border: 1px solid rgb(185, 185, 185);
 }
 #mid_left2221 {
     padding-left: 200px;
@@ -273,20 +282,33 @@ option {
     grid-template-columns: 30% 30%;
     grid-gap: 1px;
 }
-
+label{
+    margin-left: 1%;
+}
 #country {
     width: 53%;
+    padding: 5px;
     margin-left: 200px;
+    border: 1px solid rgb(185, 185, 185);
+    font-size: 14px;
+    background-color: rgb(231, 231, 231);
 }
 
 #state {
     width: 200px;
-    height: 20px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 20%;
     background-color: rgb(255, 255, 255);
-    border-radius: 4px;
+    border-radius: 2px;
+    border: 1px solid rgb(185, 185, 185);;
 }
 #city {
     width: 150px;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 2px;
+    border: 1px solid rgb(185, 185, 185);
 }
 
 #mid_left2222 {
@@ -311,7 +333,7 @@ button {
     height: 40px;
     border:  none;
     color: white;
-    background-color: rgb(248, 73, 9);
+    background-color: #f16521;
 
 }
 
@@ -324,19 +346,22 @@ button {
 #pin_valid{
     font-size: 14px;
     margin-top: 1px;
-    padding-left: 200px;
+    padding-left: 210px;
 }
 #city_valid{
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 5%;
 }
 #state_valid {
-    width: 100px;
+    padding-left: 20%;
+    padding-top: 5%;
+    width: 200px;
     font-size: 14px;
 
 }
 #address{
-    height: 100px;
+    height: 60px;
+    border: 1px solid rgb(185, 185, 185);
     /* padding: 10px 10px 10px 10px; */
 }
 /* .checkbox{
@@ -356,8 +381,9 @@ input[type="checkbox"]{
     -webkit-appearance: none; 
     height: 20px;
     width: 20px;
-    background-color: #d5d5d5;
-    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -367,19 +393,30 @@ input[type="checkbox"]{
 }
 input[type="checkbox"]:after{
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: 800;
     content: "\f00c";
-    font-size: 15px;
+    font-size: 14px;
     color:azure;
     display:none;
     
 }
 input[type="checkbox"]:checked {
-    background-color: rgb(248, 73, 9);
+    border: none;
+    background-color: #f16521;
 }
 input[type="checkbox"]:checked:after{
     display: block;
 }
 #name_in_notify{
     margin: 7% 1% 0 0;
+}
+#right_checkbox{
+    display: grid;
+    grid-template-columns: 5% 90%
+}
+.right_below{
+    margin: 10px;
+}
+a{
+    color: #000;
 }
