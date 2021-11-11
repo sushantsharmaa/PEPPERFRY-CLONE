@@ -1,8 +1,8 @@
-function navbar(){
+function navbar() {
     return `
     <div id="links">
       <div id="logo">
-        <a href="./index.html"><img src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" /></a>
+        <a href="../index.html"><img src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" /></a>
       </div>
       <div id="searchbar">
         <i class="material-icons-outlined">search</i>
@@ -59,7 +59,7 @@ function navbar(){
         </div>
         <div style="display: flex;">
           <div class="furniture-b">
-            <a href="#">Sofas</a>
+            <a href="../html/products.html">Sofas</a>
             <a style="color: gray;" href="#">1Seater Sofas</a>
             <a style="color: gray;" href="#">2Seater Sofas</a>
             <a style="color: gray;" href="#">3Seater Sofas</a>
