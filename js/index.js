@@ -1,9 +1,16 @@
-// Adding navbar --------------------------------------
+// Adding Navbar --------------------------------------
 
 import navbar from '../components/navbar.js'
 
     let navbar_section =  document.getElementById("navbar");
     navbar_section.innerHTML = navbar();
+
+// Adding  Footer --------------------------------------
+
+import footer from '../components/footer.js'
+
+let footer_section = document.getElementById("footer");
+footer_section.innerHTML = footer();
 
 // Drop Down ------------------------------------------
 
@@ -152,5 +159,30 @@ function login() {
     return alert("Invalid Credential");
 }
 
+// Slider ------------------------------------------------------
 
+function slideShow() {
 
+    const slider = ["https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_221021_es.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB01_Web_28102021_2x.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB02_Web_28102021_2x.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB03_Web_28102021_2x.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB04_Web_28102021_2x.jpg"];
+
+    if (localStorage.getItem('apollo_slider') == null) localStorage.setItem('apollo_slider', JSON.stringify(slider));
+
+    var slider_1 = document.getElementById('slider');
+    var image = document.createElement('img');
+
+    var i = 0;
+
+    setInterval(function () {
+        i = i % JSON.parse(localStorage.getItem('apollo_slider')).length;
+        image.src = JSON.parse(localStorage.getItem('apollo_slider'))[i];
+        slider_1.append(image);
+        i++;
+    }, 3000);
+
+}
+
+slideShow();

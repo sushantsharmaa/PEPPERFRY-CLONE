@@ -1,0 +1,39 @@
+#body {
+  width: 92%;
+  margin: auto;
+}
+
+#body-one {
+  padding-top: 134px;
+  display: flex;
+  gap: 20px;
+}
+
+#body-one #slider {
+  width: 66%;
+}
+
+#body-one #offers {
+  width: 32%;
+}
+
+#offers > div{
+    box-sizing: border-box;
+}
+
+#offers div:nth-child(1){
+    margin-bottom: 18px;
+}
+
+#body-two{
+    margin-top: 80px;
+}
+
+#body-two #bank-offers{
+     display: flex;
+}
+
+#body-two #bank-offers > img {
+    width: 16%;
+    margin-right: 10px;
+}
