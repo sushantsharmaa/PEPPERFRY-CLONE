@@ -155,22 +155,24 @@ body {
   border-bottom: 5px solid #F36523;
 }
 
- #furniture{
+ #furniture-dropdown{
   width: 90.5%;
   margin-left: 54px;
   height: 450px;
   display: none;
   z-index: 101;
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0, 0.4);
 }
 
-#living{
+#living-dropdown{
   width: 90.5%;
   margin-left: 54px;
   height: 420px;
   display: none;
   z-index: 102;
   background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0, 0.4);
 }
 
 #furniture-a{

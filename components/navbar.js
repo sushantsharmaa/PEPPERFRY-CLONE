@@ -47,7 +47,7 @@ function navbar() {
       <div style="margin-right: 0px"><a href="#">Modular Furniture</a></div>
     </div>
     <div id="dropdown">
-      <div id="furniture">
+      <div id="furniture-dropdown">
         <div id="furniture-a">
           <span>Sofas</span>
           <span>Seating</span>
@@ -151,7 +151,7 @@ function navbar() {
         </div>
       </div>
       <div id="dropdown-two">
-        <div id="living">
+        <div id="living-dropdown">
           <div id="furniture-a">
             <span>Sofas</span>
             <span>Seating</span>

@@ -14,10 +14,10 @@ footer_section.innerHTML = footer();
 
 // Drop Down ------------------------------------------
 
-let body = document.getElementById("main");
+let body = document.getElementById("main-one");
 
 let f = document.getElementById("f");
-let furniture = document.getElementById("furniture");
+let furniture = document.getElementById("furniture-dropdown");
 
 f.addEventListener("mouseover", ()=>{
     furniture.style.display = "block";
@@ -40,7 +40,7 @@ furniture.addEventListener("mouseout", ()=>{
 })
 
 let l = document.getElementById("l");
-let living = document.getElementById("living");
+let living = document.getElementById("living-dropdown");
 
 l.addEventListener("mouseover", ()=>{
     living.style.display = "block";
