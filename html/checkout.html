@@ -26,49 +26,77 @@
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTswlJrC8ZfOshcq4B6FrZTwm8dt3rLltp3TA&usqp=CAU" />
                 </div>
                 <div id="description">
-                    <span id="cart_color">Cart------ Delivery & Biling Address</span><span id="description_color">
+                    <span id="cart_color">Cart ------ <strong> Delivery & Biling Address </strong> </span><span
+                        id="description_color">
                         ------ Payment</span>
                 </div>
             </div>
             <div id="notification">
-                <div id="name_in_notify"><strong>WELCOME <span id="capital">Name</span>!</strong></div>
-                <img id="notification_img" src="https://img.icons8.com/ios/50/000000/appointment-reminders--v2.png"/>
+                <div id="name_in_notify">WELCOME <strong><span id="capital">Name</span>!</strong></div>
+                <img id="notification_img" src="https://img.icons8.com/ios/50/000000/appointment-reminders--v2.png" />
             </div>
-
+        </div>
+        <div>
+            <hr>
         </div>
         <div id="middle">
             <div id="mid_left">
                 <div id="mid_left1">
-                    <div>ORDER SUMMERY</div>
-                    <div id="mid_left11">( <span id="count">0</span> Items)<span id="showitems"> +</span></div>
+                    <div id="mid_left1_inside">
+                        <div class="mid_left12">ORDER SUMMERY    <span></span></div>
+                        <div id="mid_left11">( <span id="count">0</span> Items)</div>
+                        <div id="showitems">+</div>
+                    </div>
+
+                   <div id="order">
+                        <div id="order_summary">
+                            <div class="inside_order">
+                                <img class="furniture" src="https://ii1.pepperfry.com/media/catalog/product/k/a/236x260/kaylee-1-seater-sofa-in-sky-blue-colour-kaylee-1-seater-sofa-in-sky-blue-colour-evw1c8.jpg"/>
+                                <div>data1</div>              
+                            </div>
+                            <div class="inside_order">
+                                <img class="furniture" src="https://ii2.pepperfry.com/media/catalog/product/f/a/568x284/fabiola-2-seater-sofa-in-blue-colour-fabiola-2-seater-sofa-in-blue-colour-z4hjuj.jpg" />
+                                <div>data2</div>              
+                            </div>
+
+                        </div>
+                   </div>
+                    
+
                 </div>
                 <div id="mid_left2">
                     <div id="mid_left21">
-                        <div>SHIPPING & BILLING DETAILS</div>
-                        <div id="mid_left221">Tell Us Where To Deliver <span id="dash_style">—</span></div>
+                        <div class="mid_left12">SHIPPING & BILLING DETAILS</div>
+                        <div id="mid_left221">Tell Us Where To Deliver</div>
+                        <div id="dash_style">—</div>
                     </div>
                     <div id="mid_left22">
                         <div id="email"></div>
                         <div id="shippingAddress">
-                            <p><strong>Add New Shipping Address</strong></p>
+                            <p ><strong>Add New Shipping Address</strong></p>
                             <form>
                                 <br>
-                                <label class="label1">Name</label>
-                                <input type="text" id="name" name="name" placeholder="e.g Akshay Kumar" /><br><br>
-                                <div class="num">
-                                <label class="label2">Moblie Number</label>
-                                <input type="number" id="moblie" placeholder="95xxxxxxx2" />
-                                <img id="question_mark" src="https://ii1.pepperfry.com//images/svg/nCheckout-question-mark.svg" alt="" /> 
-                                <div id="show"> </div>
+                                <div class="nme">
+                                    <label class="label1">Name</label>
+                                <div id="name">Akshay Kumar</div>
                                 </div>
-                                
+                                <br><br>
+                                <div class="num1">
+                                    <label class="label2">Moblie Number</label>
+                                    <div id="moblie">9898989898</div>
+                                    <img id="question_mark"
+                                        src="https://ii1.pepperfry.com//images/svg/nCheckout-question-mark.svg"
+                                        alt="" />
+                                    <div id="show"> </div>
+                                </div>
+
                                 <div id="moblie_valid"></div><br>
                                 <label class="label3">PinCode</label>
                                 <input type="number" id="pincode" placeholder="400059" /><br>
                                 <div id="pin_valid"></div><br>
                                 <label class="label4">Address</label>
-                                <input type="text" id="address"
-                                    placeholder="House Number, Building Name, Society, Area, Road, Landmark" /><br><br>
+                                <input type="text" id="address" placeholder="House Number, Building Name, Society, Area, Road, Landmark" /><br>
+                                <div id="address_valid"></div><br>
                                 <div id="mid_left2221">
                                     <div id="city_part">
                                         <input type="text" id="city" placeholder="City" />
@@ -114,9 +142,9 @@
                                             <option>Pundicherry</option>
                                             <option>Lakshadweep</option>
                                         </select>
-                                    
-                                    <div id="state_valid"></div>
-                                </div>
+
+                                        <div id="state_valid"></div>
+                                    </div>
                                 </div>
                                 <br>
                                 <!-- <input type="text"  placeholder="India" /> -->
@@ -127,31 +155,324 @@
                                     <div class="below_checkbox">Biling Address Is The Same As Shipping Address</div>
                                 </div>
                                 <br>
-                                <div id="mid_left2223">
+                                <div id="remove">
+                                    <div id="change_billing_color"><strong>Add Biling Address</strong></div>
+                                    <div class="nme">
+                                        <label class="label1">Name</label>
+                                        <div id="name">Akshay Kumar</div>
+                                    </div>
+                                    <br><br>
+                                    <div class="num1">
+                                        <label class="label2">Moblie Number</label>
+                                        <div id="moblie">9898989898</div>
+                                        <img id="question_mark"
+                                            src="https://ii1.pepperfry.com//images/svg/nCheckout-question-mark.svg"
+                                            alt="" />
+                                        <div id="show"> </div>
+                                    </div>
+
+                                    <div id="moblie_valid"></div><br>
+                                    <label class="label3">PinCode</label>
+                                    <input type="number" id="pincode" placeholder="400059" /><br>
+                                    <div id="pin_valid"></div><br>
+                                    <label class="label4">Address</label>
+                                    <input type="text" id="address"
+                                        placeholder="House Number, Building Name, Society, Area, Road, Landmark" /><br>
+                                    <div id="address_vaild"></div><br>
+                                    <div id="mid_left2221">
+                                        <div id="city_part">
+                                            <input type="text" id="city" placeholder="City" />
+                                            <div id="city_valid1"></div>
+                                        </div>
+                                        <div id="city_part">
+                                            <input type="text" id="state1" placeholder="State" />
+                                            <div id="state_valid"></div>
+                                        </div>
+                                    </div>
+                                    <select id="country1">
+                                        <option>Country</option>
+                                        <option>Georgia</option>
+                                        <option>Afghanistan</option>
+                                        <option>�land Islands</option>
+                                        <option>Albania</option>
+                                        <option>Algeria</option>
+                                        <option>American Samoa</option>
+                                        <option>Andorra</option>
+                                        <option>Angola</option>
+                                        <option>Anguilla</option>
+                                        <option>Antarctica</option>
+                                        <option>Antigua and Barbuda</option>
+                                        <option>Argentina</option>
+                                        <option>Armenia</option>
+                                        <option>Aruba</option>
+                                        <option>Australia</option>
+                                        <option>Azerbaijan</option>
+                                        <option>Bahamas</option>
+                                        <option>Bahrain</option>
+                                        <option>Bangladesh</option>
+                                        <option>Barbados</option>
+                                        <option>Belarus</option>
+                                        <option>Belize</option>
+                                        <option>Benin</option>
+                                        <option>Bermuda</option>
+                                        <option>Bhutan</option>
+                                        <option>Bolivia, Plurinational State Of</option>
+                                        <option>Bosnia and Herzegovina</option>
+                                        <option>Botswana</option>
+                                        <option>Bouvet Island</option>
+                                        <option>Brazil</option>
+                                        <option>British Indian Ocean Territory</option>
+                                        <option>Brunei Darussalam</option>
+                                        <option>Burkina Faso</option>
+                                        <option>Burundi</option>
+                                        <option>Cambodia</option>
+                                        <option>Cameroon</option>
+                                        <option>Canada</option>
+                                        <option>Cape Verde</option>
+                                        <option>Cayman Islands</option>
+                                        <option>Central African Republic</option>
+                                        <option>Chad</option>
+                                        <option>Chile</option>
+                                        <option>China</option>
+                                        <option>Christmas Island</option>
+                                        <option>Cocos (Keeling) Islands</option>
+                                        <option>Colombia</option>
+                                        <option>Comoros</option>
+                                        <option>Congo</option>
+                                        <option>Congo, The Democratic Republic Of The</option>
+                                        <option>Cook Islands</option>
+                                        <option>Costa Rica</option>
+                                        <option>C�te D'Ivoire</option>
+                                        <option>Cuba</option>
+                                        <option>Djibouti</option>
+                                        <option>Dominica</option>
+                                        <option>Dominican Republic</option>
+                                        <option>Ecuador</option>
+                                        <option>Egypt</option>
+                                        <option>El Salvador</option>
+                                        <option>Equatorial Guinea</option>
+                                        <option>Eritrea</option>
+                                        <option>Ethiopia</option>
+                                        <option>Falkland Islands (Malvinas)</option>
+                                        <option>Faroe Islands</option>
+                                        <option>Fiji</option>
+                                        <option>French Guiana</option>
+                                        <option>French Polynesia</option>
+                                        <option>French Southern Territories</option>
+                                        <option>Gabon</option>
+                                        <option>Gambia</option>
+                                        <option>Ghana</option>
+                                        <option>Gibraltar</option>
+                                        <option>Greenland</option>
+                                        <option>Grenada</option>
+                                        <option>Guadeloupe</option>
+                                        <option>Guam</option>
+                                        <option>Guatemala</option>
+                                        <option>Guernsey</option>
+                                        <option>Guinea</option>
+                                        <option>Guinea-Bissau</option>
+                                        <option>Guyana</option>
+                                        <option>Haiti</option>
+                                        <option>Heard and McDonald Islands</option>
+                                        <option>Holy See (Vatican City State)</option>
+                                        <option>Honduras</option>
+                                        <option>Hong Kong</option>
+                                        <option>Iceland</option>
+                                        <option>India</option>
+                                        <option>Indonesia</option>
+                                        <option>Iran, Islamic Republic Of</option>
+                                        <option>Iraq</option>
+                                        <option>Isle of Man</option>
+                                        <option>Israel</option>
+                                        <option>Jamaica</option>
+                                        <option>Japan</option>
+                                        <option>Jersey</option>
+                                        <option>Jordan</option>
+                                        <option>Kazakhstan</option>
+                                        <option>Kenya</option>
+                                        <option>Kiribati</option>
+                                        <option>Korea, Republic of</option>
+                                        <option>Korea, Democratic People's Republic Of</option>
+                                        <option>Kuwait</option>
+                                        <option>Kyrgyzstan</option>
+                                        <option>Lao People's Democratic Republic</option>
+                                        <option>Lebanon</option>
+                                        <option>Lesotho</option>
+                                        <option>Liberia</option>
+                                        <option>Libyan Arab Jamahiriya</option>
+                                        <option>Liechtenstein</option>
+                                        <option>Macao</option>
+                                        <option>Macedonia, the Former Yugoslav Republic Of</option>
+                                        <option>Madagascar</option>
+                                        <option>Malawi</option>
+                                        <option>Malaysia</option>
+                                        <option>Maldives</option>
+                                        <option>Mali</option>
+                                        <option>Marshall Islands</option>
+                                        <option>Martinique</option>
+                                        <option>Martinique</option>
+                                        <option>Mauritius</option>
+                                        <option>Mayotte</option>
+                                        <option>Mexico</option>
+                                        <option>Micronesia, Federated States Of</option>
+                                        <option>Moldova, Republic of</option>
+                                        <option>Monaco</option>
+                                        <option>Mongolia</option>
+                                        <option>Montenegro</option>
+                                        <option>Montserrat</option>
+                                        <option>Morocco</option>
+                                        <option>Mozambique</option>
+                                        <option>Myanmar</option>
+                                        <option>Namibia</option>
+                                        <option>Nauru</option>
+                                        <option>Nepal</option>
+                                        <option>Netherlands Antilles</option>
+                                        <option>New Caledonia</option>
+                                        <option>New Zealand</option>
+                                        <option>Nicaragua</option>
+                                        <option>Niger</option>
+                                        <option>Nigeria</option>
+                                        <option>Niue</option>
+                                        <option>Norfolk Island</option>
+                                        <option>Northern Mariana Islands</option>
+                                        <option>Norway</option>
+                                        <option>Oman</option>
+                                        <option>Pakistan</option>
+                                        <option>Palau</option>
+                                        <option>Palestinian Territory, Occupied</option>
+                                        <option>Panama</option>
+                                        <option>Papua New Guinea</option>
+                                        <option>Paraguay</option>
+                                        <option>Peru</option>
+                                        <option>Philippines</option>
+                                        <option>Saint Pierre And Miquelon</option>
+                                        <option>Pitcairn</option>
+                                        <option>Puerto Rico</option>
+                                        <option>Qatar</option>
+                                        <option>R�union</option>
+                                        <option>Russian Federation</option>
+                                        <option>Rwanda</option>
+                                        <option>Saint Helena, Ascension and Tristan Da Cunha</option>
+                                        <option>Saint Kitts And Nevis</option>
+                                        <option>Saint Lucia</option>
+                                        <option>Saint Vincent And The Grenedines</option>
+                                        <option>Samoa</option>
+                                        <option>San Marino</option>
+                                        <option>Sao Tome and Principe</option>
+                                        <option>Saudi Arabia</option>
+                                        <option>Senegal</option>
+                                        <option>Serbia</option>
+                                        <option>Seychelles</option>
+                                        <option>Sierra Leone</option>
+                                        <option>Singapore</option>
+                                        <option>Solomon Islands</option>
+                                        <option>Somalia</option>
+                                        <option>South Africa</option>
+                                        <option>South Georgia and the South Sandwich Islands</option>
+                                        <option>Sri Lanka</option>
+                                        <option>Sudan</option>
+                                        <option>Suriname</option>
+                                        <option>Svalbard And Jan Mayen</option>
+                                        <option>Swaziland</option>
+                                        <option>Switzerland</option>
+                                        <option>Syrian Arab Republic</option>
+                                        <option>Taiwan, Province Of China</option>
+                                        <option>Tajikistan</option>
+                                        <option>Tanzania, United Republic of</option>
+                                        <option>Thailand</option>
+                                        <option>Timor-Leste</option>
+                                        <option>Togo</option>
+                                        <option>Tokelau</option>
+                                        <option>Tonga</option>
+                                        <option>Trinidad and Tobago</option>
+                                        <option>Tunisia</option>
+                                        <option>Turkey</option>
+                                        <option>Turkmenistan</option>
+                                        <option>Turks and Caicos Islands</option>
+                                        <option>Tuvalu</option>
+                                        <option>Uganda</option>
+                                        <option>Ukraine</option>
+                                        <option>United Arab Emirates</option>
+                                        <option>United Kingdom</option>
+                                        <option>United States</option>
+                                        <option>United States Minor Outlying Islands</option>
+                                        <option>Uruguay</option>
+                                        <option>Uzbekistan</option>
+                                        <option>Vanuatu</option>
+                                        <option>Venezuela, Bolivarian Republic of</option>
+                                        <option>Viet Nam</option>
+                                        <option>Virgin Islands, British</option>
+                                        <option>Virgin Islands, U.S.</option>
+                                        <option>Wallis and Futuna</option>
+                                        <option>Western Sahara</option>
+                                        <option>Yemen</option>
+                                        <option>Zambia</option>
+                                        <option>Zimbabwe</option>
+                                        <option>Saint Barth�lemy</option>
+                                        <option>Saint Martin</option>
+                                        <option>Bonaire, Sint Eustatius and Saba</option>
+                                        <option>Cura�ao</option>
+                                        <option>Sint Maarten (Dutch part)</option>
+                                        <option>South Sudan</option>
+                                    </select>
+                                </div>
+
+                                <!-- <div id="mid_left2223">
                                     <input class="checkbox" type="checkbox" />
                                     <div class="below_checkbox">I Want To Sign Up</div>
                                 </div>
-                                <br>
+                                <br> -->
                                 <!-- <input type="submit" id="submit" name="submit" value="SAVE & CONTINUE"/> -->
                             </form>
+                            <br>
                             <button id="submit" onclick="verify()">SAVE & CONTINUE</button>
                             <br><br>
                             <div id="mid_left3">
                                 <div id="mid_left31">PAYMENT</div>
-                                <div id="mid_left32">How Would You Like To Pay <spam id="PaymentMethod">+</spam>
-                                </div>
+                                <div id="mid_left32">How Would You Like To Pay</div>
+                                <div id="PaymentMethod">+</div>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
             <div id="right">
-                <div id="mid_right"></div>
-                <div class="right_below" id="">No Cost EMI Available starting <span><a href="">₹ 4,221/month</a></span>. EMI Starting <span><a href="">₹ 1,193/month</a></span></div>
-                <div class="right_below" id="right_checkbox">
+                <div id="mid_right">
+                    <div class="right_in">
+                        <div>Cart Value</div>
+                        <div  class="right_in1">₹ 36,498</div>
+                    </div>
+                    <div class="right_in" id="retail">
+                        <div><strong>Retail Discount</strong></div>
+                        <div  class="right_in1"><strong>(-)₹ 11,720</strong></div>
+                    </div>
+                    <div class="right_in">
+                        <div>Delivery<span id="free_color">(FREE)</span></div>
+                        <div class="right_in1">₹ 0</div>
+                    </div>
+                    <div class="right_in">
+                        <div>Assembly</div>
+                        <div class="right_in1"><span>₹ 449</span></div>
+                    </div>
+                    <div class="right_in">
+                        <div>GiveIndia</div>
+                        <div class="right_in1">₹ 99</div>
+                    </div>
+                    <hr>
+                    <div class="right_in" id="total_font">
+                        <div>Total</div>
+                        <div class="right_in1"id="total_value" ><span>₹ 25,326</span></div>
+                    </div>
+                    <div class="right_in1" id="tax"><strong>(inclusive of all taxes)</strong></div>
+                    <div class="right_in1" id="more">˄</div>
+                </div>
+                <div class="right_below1" id=""><strong>No Cost EMI Available starting <span><a href="">₹
+                                4,221/month</a></span>. EMI Starting <span><a href="">₹ 1,193/month</a></span></strong>
+                </div>
+                <div class="right_below2" id="right_checkbox">
                     <input type="checkbox" />
-                    <div>Contribute Rs.99 For COVID Relief Through GiveIndia.</div>
+                    <div id="right_last"><strong>Contribute Rs.99 For COVID Relief Through GiveIndia.</strong></div>
                 </div>
             </div>
         </div>
@@ -207,7 +528,7 @@
                         <img src="https://ii1.pepperfry.com/images/svg/calendar-1.svg" />
                     </div>
                     <div id="f22">
-                        <spam>No Cost EMIs: </spam>Now pay in easy installments at no additional cost
+                        <strong>No Cost EMIs: </strong>Now pay in easy installments at no additional cost
                     </div>
                 </div>
             </div>
