@@ -29,10 +29,7 @@
 
         }
 
-        #in_cart {
-            /* height: 50px; */
 
-        }
 
         #box1 {
             width: 60%;
@@ -51,7 +48,6 @@
         input,
         button {
             margin-top: 1%;
-            height: 62%;
             border: 1px solid black;
         }
 
@@ -67,8 +63,35 @@
             align-items: center;
         }
 
+        #item>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
         #item>div {
             border: 1px solid blue;
+        }
+
+        #item>div:nth-child(3) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #box1-last> img{
+            margin-top: 20px;
+            width: 50px;
+            padding-left: 20px;
+        }
+
+        #qty {
+            /* margin: 13px 0px 0 60px; */
+            text-align: center;
+            padding-top: 5px;
+            width: 36px;
+            height: 25px;
+            border: 1px solid black;
         }
 
         #box2 {
@@ -117,6 +140,21 @@
         .value>h5 {
             margin: -18px 0 0 205px;
         }
+
+        #place_order {
+            margin-top: 15px;
+            height: 40px;
+            width: 100%;
+            background-color: #f16521;
+            color: white;
+            font-size: larger;
+            border: none;
+            outline: none;
+        }
+
+        #last {
+            margin-top: 50px;
+        }
     </style>
 
 
@@ -137,9 +175,26 @@
                 <div><img
                         src="https://ii1.pepperfry.com/media/catalog/product/c/r/90x99/cristobal-half-leather-three-seater-sofa-in-black-colour-by-casacraft-cristobal-half-leather-three-s-4lrq98.jpg"
                         alt=""></div>
-                <div>descri</div>
-                <div></div>
-                <div></div>
+
+                <div>
+                    <div>
+                        Scarlett 3 Seater Velvet Sofa In Royal Blue Colour - CasaCraft By Pepperfry</div>
+                    <div>
+                        36 Months' Warranty, 100% Genuine</div>
+                    <div>Delivery By
+                        Enter Your Pincode Above To Get These Details</div>
+                </div>
+
+                <div>
+                    <div>-</div>
+                    <div id="qty">1</div>
+                    <div>+</div>
+                </div>
+
+                <div id= "box1-last">
+                    <img src="https://cdn-icons.flaticon.com/png/128/2907/premium/2907762.png?token=exp=1636658424~hmac=1880cacf840595a781f143ca7146f40d" alt="">
+                    <img src="https://t4.ftcdn.net/jpg/01/25/83/03/240_F_125830316_m9Grtzjlt2I5Gp4qpDQq5G5BSXR5d9ZF.jpg" alt="">
+                </div>
 
 
             </div>
@@ -188,80 +243,24 @@
                 </div>
 
             </div>
-            <div>
-                
+
+            <div id="last">
+                <input type="checkbox" id="" name="checkbox">
+                <label for="">Contribute Rs.99 For COVID Relief Through GiveIndia.</label>
+
+                <br>
+
+                <input type="checkbox" id="" name="checkbox">
+                <label for="">Use GSTIN For Business Purchase (Optional)</label>
+                <br>
+                <button id="place_order">Place Order</button>
+
+
+
             </div>
         </div>
     </div>
 
-
-    <!-- <div id="footer1">
-        <div id="f1">WE ACCEPT</div>
-        <div id="footer11">
-            <div id="visa">
-                <img src="https://ii2.pepperfry.com/images/new-visa-logo.png">
-            </div>
-
-            <div id="maestro">
-                <img src="https://ii2.pepperfry.com/images/800-px-maestro-logosvg.png">
-            </div>
-
-            <div id="american">
-                <img src="https://ii2.pepperfry.com/images/american-express-icon.png">
-            </div>
-
-            <div id="dc">
-                <img src="https://ii2.pepperfry.com/images/d-i-n-e-r-s-c-a-r-d-1.png">
-            </div>
-
-            <div id="rupay">
-                <img src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png">
-            </div>
-
-            <div id="mastercard">
-                <img src="https://ii2.pepperfry.com/images/mastercard-logo-png.png">
-            </div>
-
-            <div id="wallet">
-                <div>
-                    <img src="https://ii2.pepperfry.com/images/982-wallet.png">
-                </div>
-                <div class="f11">Wallet</div>
-            </div>
-
-            <div id="netbanking">
-                <div>
-                    <img src="https://ii2.pepperfry.com/images/985-netbanking.png">
-                </div>
-                <div class="f11">Netbanking</div>
-
-            </div>
-        </div>
-
-    </div>
-    <div id="footer2">
-        <div id="f2">BUY SAFE, PAY EASY</div>
-        <div id="foot2">
-            <div id="f21">
-                <img src="https://ii1.pepperfry.com/images/svg/calendar-1.svg" />
-            </div>
-            <div id="f22">
-                <spam>No Cost EMIs: </spam>Now pay in easy installments at no additional cost
-            </div>
-        </div>
-    </div>
-    <div id="footer3">
-        <div id="f3">100% SAFE & SECURE</div>
-        <div id="foot3">
-            <div id="f31">
-                <img src="https://ii2.pepperfry.com/images/download-1.png">
-            </div>
-            <div id="f32">
-                <img src="https://ii2.pepperfry.com/images/p-c-i-d-s-s.png">
-            </div>
-        </div>
-    </div>
-    <div id="footer4">Copyright 2021 Pepperfry.com All rights Reserved</div> -->
 
     </div>
 
@@ -270,10 +269,10 @@
 </html>
 
 <script>
-    // 
 
-    let sec = document.getElementById("in_cart");
-    sec.innerText = `IN YOUR CART ( )`
+
+   // let sec = document.getElementById("in_cart");
+   // sec.innerText = `IN YOUR CART ( )`
 
 
 
