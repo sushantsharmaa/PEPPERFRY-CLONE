@@ -14,29 +14,23 @@ footer_section.innerHTML = footer();
 
 // Drop Down ------------------------------------------
 
-let body = document.getElementById("main-one");
-
 let f = document.getElementById("f");
 let furniture = document.getElementById("furniture-dropdown");
 
 f.addEventListener("mouseover", ()=>{
     furniture.style.display = "block";
-    body.style.backgroundColor = "rgba(0,0,0,0.3)";
 })
 
 f.addEventListener("mouseout", ()=>{
     furniture.style.display = "none";
-    body.style.backgroundColor = "white";
 })
 
 furniture.addEventListener("mouseover", ()=>{
     furniture.style.display = "block";
-    body.style.backgroundColor = "rgba(0,0,0,0.3)";
 })
 
 furniture.addEventListener("mouseout", ()=>{
     furniture.style.display = "none";
-    body.style.backgroundColor = "white";
 })
 
 let l = document.getElementById("l");
@@ -44,22 +38,18 @@ let living = document.getElementById("living-dropdown");
 
 l.addEventListener("mouseover", ()=>{
     living.style.display = "block";
-    body.style.backgroundColor = "rgba(0,0,0,0.3)";
 })
 
 l.addEventListener("mouseout", ()=>{
     living.style.display = "none";
-    body.style.backgroundColor = "white";
 })
 
 living.addEventListener("mouseover", ()=>{
     living.style.display = "block";
-    body.style.backgroundColor = "rgba(0,0,0,0.3)";
 })
 
 living.addEventListener("mouseout", ()=>{
     living.style.display = "none";
-    body.style.backgroundColor = "white";
 })
 
 // SignIn/SignUp Modal -----------------------------------------
@@ -71,11 +61,12 @@ let go_to_register = document.getElementById("go-to-register");
 
 profile.addEventListener("mouseover", () => {
     signinDiv.style.display = "block";
-})
+});
 
 profile.addEventListener("mouseout", () => {
     signinDiv.style.display = "none";
 })
+
 
 let signin_div_btn = document.getElementById("signin-div-btn");
 let signin_modal = document.getElementById("signin-modal");
@@ -85,28 +76,23 @@ let close1 = document.getElementById("close1");
 
 signin_div_btn.addEventListener("click", () => {
     signin_modal.style.display = "block";
-    body.style.backgroundColor = "rgba(0,0,0,0.13)";
 })
 
 close.addEventListener("click", () => {
     signin_modal.style.display = "none";
-    body.style.backgroundColor = "white";
 })
 
 go_to_login.addEventListener("click", () => {
    login_modal.style.display = "block";
-   body.style.backgroundColor = "rgba(0,0,0,0.13)";
 })
 
 go_to_register.addEventListener("click", () => {
     login_modal.style.display = "none";
-    body.style.backgroundColor = "rgba(0,0,0,0.13)";
  })
 
 close1.addEventListener("click", () => {
     login_modal.style.display = "none";
     signin_modal.style.display = "none";
-    body.style.backgroundColor = "white";
 })
 
 // SignUp Function ---------------------------------------
@@ -119,27 +105,69 @@ function signup() {
     let mobile = data.UserNum.value;
     let email = data.mail.value;
     let password = data.psswrd.value;
+    console.log(name)
+    let Name = document.getElementById("UnName")
+    let Email = document.getElementById("mail")
+    let Mobile = document.getElementById("UserNum")
+    let Password = document.getElementById("psswrd")
 
-    var info = {
-        name,
-        mobile,
-        email,
-        password
-    }
-    var arr;
-    arr = localStorage.getItem('signup');
+    let alert4 = document.getElementById("alert")
+    let alert1 = document.getElementById("alert1")
+    let alert2 = document.getElementById("alert2")
+    let alert3 = document.getElementById("alert3")
 
-    if (arr == null) {
-        arr = [];
+    if (name.length === 0) {
+        Name.style.border = "1px solid red"
+
+        alert1.textContent = "Enter Name"
+        alert1.style.color = "red"
+        alert1.style.fontSize = "13px"
+
+    } else if (email.length === 0) {
+        Email.style.border = "1px solid red"
+
+        alert2.innerHTML = "Enter Address"
+        alert2.style.color = "red"
+        alert2.style.fontSize = "13px"
+
+    } else if (mobile.length === 0) {
+        Mobile.style.border = "1px solid red"
+
+        alert4.innerHTML = "Enter Mobile Number"
+        alert4.style.color = "red"
+        alert4.style.fontSize = "13px"
+    } else if (password.length === 0) {
+
+        Password.style.border = "1px solid red"
+
+        alert3.innerHTML = "Enter Password"
+        alert3.style.color = "red"
+        alert3.style.fontSize = "13px"
     } else {
-        arr = JSON.parse(localStorage.getItem('signup'));
-    }
-    arr.push(info);
+        var info = {
+            name,
+            mobile,
+            email,
+            password
+        }
+        var arr;
+        arr = localStorage.getItem('signup');
 
-    localStorage.setItem('signup', JSON.stringify(arr));
-    alert('You are Successfully Registered');
-    window.location.href = "index.html"
+        if (arr == null) {
+            arr = [];
+        } else {
+            arr = JSON.parse(localStorage.getItem('signup'));
+        }
+        arr.push(info);
+        localStorage.setItem('signup', JSON.stringify(arr));
+        alert('You are Successfully Registered');
+        window.location.href = "index.html";
+    }
+    
 }
+
+let register = document.getElementById("register");
+register.addEventListener("click",signup);
 
 // Log In Function -------------------------------------------
 
@@ -159,6 +187,10 @@ function login() {
     return alert("Invalid Credential");
 }
 
+let logIn = document.getElementById("login");
+logIn.addEventListener("click",login);
+
+
 // Slider ------------------------------------------------------
 
 function slideShow() {
@@ -169,7 +201,7 @@ function slideShow() {
         "https://ii2.pepperfry.com/media/wysiwyg/banners/HB03_Web_28102021_2x.jpg",
         "https://ii2.pepperfry.com/media/wysiwyg/banners/HB04_Web_28102021_2x.jpg"];
 
-    if (localStorage.getItem('apollo_slider') == null) localStorage.setItem('apollo_slider', JSON.stringify(slider));
+    if (localStorage.getItem('pf_slider') == null) localStorage.setItem('pf_slider', JSON.stringify(slider));
 
     var slider_1 = document.getElementById('slider');
     var image = document.createElement('img');
@@ -177,8 +209,8 @@ function slideShow() {
     var i = 0;
 
     setInterval(function () {
-        i = i % JSON.parse(localStorage.getItem('apollo_slider')).length;
-        image.src = JSON.parse(localStorage.getItem('apollo_slider'))[i];
+        i = i % JSON.parse(localStorage.getItem('pf_slider')).length;
+        image.src = JSON.parse(localStorage.getItem('pf_slider'))[i];
         slider_1.append(image);
         i++;
     }, 3000);

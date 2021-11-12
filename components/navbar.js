@@ -20,7 +20,7 @@ function navbar() {
           </span>
         </div>
         <div class="links">
-          <span class="material-icons-outlined"> shopping_cart </span>
+        <a href="../html/cart.html"><span class="material-icons-outlined"> shopping_cart </span></a>
           <span>Cart</span>
         </div>
         <div class="links" id="profile">
@@ -30,7 +30,9 @@ function navbar() {
             <button id="signin-div-btn">LOGIN/REGISTER</button>
             <p>To access your account & manage orders</p>
           </div>
-          <div id="login-div"></div>
+          <div id="login-div">
+          
+          </div>
         </div>
       </div>
     </div>
@@ -261,28 +263,32 @@ function navbar() {
                       <div class="name">
                         <label for="uname"></label>
                         <input type="text" class="Input" id="UnName" placeholder="Name" name="uname" required>
+                        <p id="alert1"></p>
                       </div>
                     </div>
                     <div class="container">
                       <div class="name">
                         <label for="num"></label>
                         <input type="tel" class="Input" id="UserNum" placeholder="Mobile number" name="num" required>
+                        <p id="alert"></p>
                       </div>
                     </div>
                     <div class="container">
                       <div class="name">
                         <label for="mail"></label>
                         <input type="text" class="Input" id="mail" placeholder="Email" name="mail" required>
+                        <p id="alert2"></p>
                       </div>
                     </div>
                     <div class="container">
                       <div class="name">
                         <label for="psswrd"></label>
                         <input type="password" class="Input" id="psswrd" placeholder="Password" name="psw" required>
+                        <p id="alert3"></p>
                       </div>
                     </div>
                   </form>
-                  <button onclick="signup()" type="submit">REGISTER</button>
+                  <button id="register">REGISTER</button>
                   <span class="login_span">By registering you agree to our <a class="termconditions" href="#">Terms &
                       Conditions</a></span>
                 </div>
@@ -331,7 +337,7 @@ function navbar() {
                                 </div>
                             </div>    
                         </form>
-                        <button onclick="login()">LOG IN</button>
+                        <button id="login">LOG IN</button>
                         <a href="#" style="color: #f16521 ;font-size: 12px; font-weight: 300;font-family: 'Fira Sans',sans-serif;">Forgot Password</a></span>
                     </div>
                 </div>  

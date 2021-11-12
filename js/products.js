@@ -1,28 +1,15 @@
-var productData = [{
-        img: "https://ii2.pepperfry.com/media/catalog/product/a/m/236x260/amelia-1-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-1-seater-sofa-in-charcoal-grey-colo-dgih4v.jpg",
-        name: "Amelia 1 Seater Sofa In harcoal Grey Colour",
+var productData = [
+    {
+        img: "https://ii2.pepperfry.com/media/catalog/product/f/a/568x284/fabiola-2-seater-sofa-in-blue-colour-fabiola-2-seater-sofa-in-blue-colour-z4hjuj.jpg",
+        name: "Fabiola 2 Seater Sofa In Grey Colour",
         brand: "CasaCraft by Pepperfry",
-        price: 21999,
-        cutPrice: 35999,
+        price: 92377,
+        cutPrice: 202999,
     },
     {
-        img: "https://ii2.pepperfry.com/media/catalog/product/a/v/236x260/avian-solid-wood-1-seater-sofa-in-provincial-teak-finish-by-woodsworth-avian-solid-wood-1-seater-sof-ttevk9.jpg",
-        name: "Avian Solid Wood 1 Seater Sofa In Provincial Teak Finish",
-        brand: "Woodsworth by Pepperfry",
-        price: 22999,
-        cutPrice: 35999,
-    },
-    {
-        img: "https://ii1.pepperfry.com/media/catalog/product/o/w/568x284/owen-3-seater-sofa-in-indigo-blue-and-white-stripes-colour---casacraft-by-pepperfry-owen-3-seater-so-qnxotc.jpg",
-        name: "Owen 3 Seater Sofa In Indigo Blue And White Stripes Colour",
+        img: "https://ii3.pepperfry.com/media/catalog/product/e/l/568x284/elias-2-seater-half-leather-sofa-in-brown-colour-by-casacraft-elias-2-seater-half-leather-sofa-in-br-hxznnd.jpg",
+        name: "Elias 2 Seater Half Leather Sofa In Brown Colour",
         brand: "CasaCraft by Pepperfry",
-        price: 50999,
-        cutPrice: 84999,
-    },
-    {
-        img: "https://ii3.pepperfry.com/media/catalog/product/h/a/568x284/haaken-3-seater-sofa-in-brown-color----woodsworth-by-pepperfry-haaken-3-seater-sofa-in-brown-color---bjvyjn.jpg",
-        name: "Haaken 3 Seater Sofa In Brown Color",
-        brand: "Woodsworth by Pepperfry",
         price: 47999,
         cutPrice: 89999,
     },
@@ -74,8 +61,28 @@ var productData = [{
         brand: "CasaCraft by Pepperfry",
         price: 47999,
         cutPrice: 85999,
+    },
+    {
+        img: "https://ii3.pepperfry.com/media/catalog/product/e/l/568x284/elias-2-seater-half-leather-sofa-in-brown-colour-by-casacraft-elias-2-seater-half-leather-sofa-in-br-hxznnd.jpg",
+        name: "Elias 2 Seater Half Leather Sofa In Brown Colour",
+        brand: "CasaCraft by Pepperfry",
+        price: 65449,
+        cutPrice: 142999,
+    },
+    {
+        img: "https://ii2.pepperfry.com/media/catalog/product/a/m/236x260/amelia-1-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-1-seater-sofa-in-charcoal-grey-colo-dgih4v.jpg",
+        name: "Amelia 1 Seater Sofa In harcoal Grey Colour",
+        brand: "CasaCraft by Pepperfry",
+        price: 21999,
+        cutPrice: 35999,
+    },
+    {
+        img: "https://ii2.pepperfry.com/media/catalog/product/a/v/236x260/avian-solid-wood-1-seater-sofa-in-provincial-teak-finish-by-woodsworth-avian-solid-wood-1-seater-sof-ttevk9.jpg",
+        name: "Avian Solid Wood 1 Seater Sofa In Provincial Teak Finish",
+        brand: "Woodsworth by Pepperfry",
+        price: 22999,
+        cutPrice: 35999,
     }
-
 ]
 
 if (localStorage.getItem("productData") == null) {
@@ -92,9 +99,6 @@ function showProducts(d) {
     productData.forEach(function(el) {
 
         let card = document.createElement("div");
-        card.addEventListener("click", function() {
-            window.location.href = "productInfo.html"
-        })
 
 
         let img_div = document.createElement("div");
@@ -134,12 +138,34 @@ function showProducts(d) {
 
         card.append(img_div, name_div, brand_div, price_div, save_div, ship_div)
         card_div.append(card);
+        card.addEventListener("click", function() {
+            NewPage(el)
+                // window.location.href = "../html/productInfo.html"
+
+        })
+
     });
 
 }
 
 showProducts(JSON.parse(localStorage.getItem("productData")))
 
+if (localStorage.getItem("ProductInfo") === null) {
+    localStorage.setItem("ProductInfo", JSON.stringify([]))
+}
+
+function NewPage(news) {
+    let mynews = JSON.parse(localStorage.getItem("ProductInfo"))
+
+    mynews.push(news)
+
+    localStorage.setItem("ProductInfo", JSON.stringify(mynews))
+
+
+    window.location.href = "../html/productInfo.html"
+
+
+}
 
 
 
@@ -268,5 +294,5 @@ function sortPrice60() {
 }
 
 function gohome() {
-    window.location.href = "homePage.html"
+    window.location.href = "index.html"
 }

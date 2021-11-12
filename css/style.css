@@ -82,13 +82,14 @@ body {
 .links .material-icons-outlined {
   font-size: 1.7rem !important;
   padding-bottom: 2px;
+  color: black;
 }
 
-#signin-div{
+#signin-div,#login-div{
   position: absolute;
   margin-top: 50px;
   right: 20px;
-  width: 110px;
+  width: 130px;
   height: 80px;
   z-index: 203;
   background-color: white;
@@ -110,9 +111,10 @@ body {
   cursor: pointer;
 }
 
-#signin-div > p{
+#signin-div > p {
   font-size: 0.68rem;
   text-align: left;
+  color: black;
 }
 
 #login-div {
