@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/899371d0a4.js" crossorigin="anonymous"></script>
+    <title>www.pepperfry.com/checkout/cart?from=minicart</title>
+
+
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+        }
+
+        #container {
+            border: 1px solid black;
+            padding-left: 8%;
+            margin-top: 100px;
+        }
+
+        #container>div {
+            display: inline-block;
+        }
+
+        #box1 {
+            width: 60%;
+            height: fit-content;
+            border: 1px solid red;
+            vertical-align: top;
+            margin-right: 2%
+        }
+
+        #pin {
+            padding-left: 5%;
+            height: 40px;
+            background-color: #f5f5f5;
+            font-weight: 600;
+            color: grey;
+            padding-top: 7px;
+        }
+
+        input,
+        button {
+            height: 65%;
+            border: 1px solid black;
+        }
+
+        .item {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr 1fr 1fr;
+            grid-template-rows: 160px;
+        }
+
+        .item>div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .item>div {
+            border: 1px solid blue;
+        }
+
+        .item>div:nth-child(3) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #box1-last>img {
+            margin-top: 20px;
+            width: 50px;
+            padding-left: 20px;
+        }
+
+        #qty {
+            /* margin: 13px 0px 0 60px; */
+            text-align: center;
+            padding-top: 5px;
+            width: 36px;
+            height: 25px;
+            border: 1px solid black;
+        }
+
+        #box2 {
+            width: 30%;
+            height: 500px;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        #box2>div:nth-child(1) {
+            display: flex;
+            border: 1px solid teal;
+            width: 100%;
+            height: 10%;
+            align-items: center;
+            color: grey;
+            border: 1px solid grey;
+
+
+        }
+
+        #box2>div:nth-child(1) img {
+            height: 80%;
+            margin: 0px 10px 0px 13px;
+        }
+
+        #box2>div:nth-child(2) {
+            padding: 11px;
+            margin-top: 10px;
+            border: 1px solid grey;
+        }
+
+        .value>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .value p {
+            margin: 3px 0;
+            font-size: 13px;
+            color: gray;
+        }
+
+        .value>h5 {
+            margin: -18px 0 0 205px;
+        }
+
+        #place_order {
+            margin-top: 15px;
+            height: 40px;
+            width: 100%;
+            background-color: #f16521;
+            color: white;
+            font-size: larger;
+            border: none;
+            outline: none;
+        }
+
+        #last {
+            margin-top: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="container">
+
+        <h2 id="in_cart"></h2>
+
+
+        <div id="box1">
+            <div id="pin">Enter Your Pincode For Delivery & Assembly Information
+                <input type="number" name="" id="" placeholder="Pincode">
+                <button>GO</button>
+            </div>
+            <!-- <div id="id"></div> -->
+
+        </div>
+        <div id="box2">
+            <div><img src="https://cdn-icons-png.flaticon.com/512/815/815252.png" alt="">
+                <p>Apply Coupon</p>
+            </div>
+
+            <div>
+                <div class="value">
+                    <div>
+                        <p>Cart value</p>
+                        <p>₹&nbsp; 4599
+                        </p>
+                    </div>
+                    <div>
+                        <p color="green">Retail Discount</p>
+                        <p color="green">₹&nbsp; 999
+                        </p>
+                    </div>
+                    <div>
+                        <p>Delivery (FREE)</p>
+                        <p>₹&nbsp; 0
+                        </p>
+                    </div>
+                    <div>
+                        <p>Assembly</p>
+                        <p>₹&nbsp; 449
+                        </p>
+                    </div>
+                    <div>
+                        <p>GiveIndia</p>
+                        <p>₹&nbsp; 99
+                        </p>
+                    </div>
+
+                    <p>Delivery & Assembly Charges Extra. Enter Pincode To Know</p>
+
+                </div>
+                <hr>
+                <div class="value">
+                    <div>
+                        <h4>Total</h4>
+                        <h4>₹&nbsp; 4599
+                        </h4>
+                    </div>
+                    <h5>
+                        (inclusive of all taxes)
+
+                    </h5>
+                </div>
+                <hr>
+                <div class="value">
+                    <p>No Cost EMI Available Starting ₹ 8,100/month. EMI Starting ₹ 2,288/month</p>
+                </div>
+
+            </div>
+
+            <div id="last">
+                <input type="checkbox" id="" name="checkbox">
+                <label for="">Contribute Rs.99 For COVID Relief Through GiveIndia.</label>
+
+                <br>
+
+                <input type="checkbox" id="" name="checkbox">
+                <label for="">Use GSTIN For Business Purchase (Optional)</label>
+                <br>
+                <button id="place_order">Place Order</button>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    let sec = document.getElementById("in_cart");
+    sec.innerText = `IN YOUR CART ( )`
+
+    let data = JSON.parse(localStorage.getItem("productData")) || [];
+
+    console.log(data);
+
+    data.forEach(el => {
+        let count = 1;
+
+        let div1 = document.createElement("div");
+        div1.setAttribute("class", "item");
+
+
+        let div1A = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = el.img;
+        div1A.append(img);
+
+        let div1B = document.createElement("div");
+        let div1B1 = document.createElement("div");
+        div1B1.innerText = el.name;
+        let div1B2 = document.createElement("div");
+        div1B2.innerText = "36 Month's Warranty, 100% Genuine";
+        div1B2.style.color = "#f16521";
+
+        div1B.append(div1B1, div1B2)
+
+        //------------------------------------------//
+        let div1C = document.createElement("div");
+        let div1C1 = document.createElement("div");
+        div1C1.innerText = "-";
+
+        let div1C2 = document.createElement("div");
+        div1C1.innerText = count;
+        div1C2.style.textAlign = "center";
+        div1C2.style.paddingTop = "5px";
+        div1C2.style.width = "36px";
+        div1C2.style.height = "25px";
+        div1C2.style.border = "1px solid black";
+
+        let div1C3 = document.createElement("div");
+        div1C3.innerText = "+";
+
+        let cutprice = document.createElement("div");
+        cutprice.innerText = el.cutPrice;
+        cutprice.style.color = "grey";
+        cutprice.style.textDecoration = "line-through"
+
+        let price = document.createElement("div");
+        price.innerText = `₹ ${el.price}`
+        price.style.color = "#f16521";
+
+        //div1C.append()
+
+        div1.append(div1A, div1B)
+
+        document.getElementById("box1").append(div1)
+
+
+        //-------------------------------------------------//
+
+    });
+
+
+    // ------------------------------------//
+
+    let Checkout_Data = {
+        Cart_Value: `₹ ${4599}`,
+        Retail_Discount: `₹ ${4599}`,
+        Delivery_Free: `₹ ${0}`,
+        Assembly: `₹ ${499}`,
+        Total: `₹ ${4998}`
+    }
+
+    localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data))
+
+
+    //------------------------------------//
+
+
+
+
+</script>
