@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/899371d0a4.js" crossorigin="anonymous"></script>
-    <title>www.pepperfry.com/checkout/cart?from=minicart</title>
+    <title>Cart</title>
 
 
     <style>
@@ -19,17 +19,11 @@
             border: 1px solid black;
             padding-left: 8%;
             margin-top: 100px;
-
-
         }
 
         #container>div {
             display: inline-block;
-
-
         }
-
-
 
         #box1 {
             width: 60%;
@@ -41,45 +35,52 @@
 
         #pin {
             padding-left: 5%;
-            height: 15%;
+            height: 40px;
             background-color: #f5f5f5;
+            font-weight: 600;
+            color: grey;
+            padding-top: 7px;
         }
 
-        input,
-        button {
-            margin-top: 1%;
+        input button {
             border: 1px solid black;
         }
 
-        #item {
+        label {
+            font-size: 11px;
+        }
+
+        /*
+        .item {
             display: grid;
             grid-template-columns: 1fr 1.8fr 1fr 1fr;
             grid-template-rows: 160px;
         }
 
-        #item>div:nth-child(1) {
+        .item>div:nth-child(1) {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        #item>div:nth-child(2) {
+        .item>div:nth-child(2) {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
         }
 
-        #item>div {
+        .item>div {
             border: 1px solid blue;
         }
 
-        #item>div:nth-child(3) {
+        .item>div:nth-child(3) {
             display: flex;
             justify-content: space-around;
             align-items: center;
-        }
-        #box1-last> img{
+        } */
+
+        #box1-last>img {
             margin-top: 20px;
             width: 50px;
             padding-left: 20px;
@@ -134,7 +135,8 @@
 
         .value p {
             margin: 3px 0;
-            font-size: 10px;
+            font-size: 13px;
+            color: gray;
         }
 
         .value>h5 {
@@ -171,33 +173,8 @@
                 <input type="number" name="" id="" placeholder="Pincode">
                 <button>GO</button>
             </div>
-            <div id="item">
-                <div><img
-                        src="https://ii1.pepperfry.com/media/catalog/product/c/r/90x99/cristobal-half-leather-three-seater-sofa-in-black-colour-by-casacraft-cristobal-half-leather-three-s-4lrq98.jpg"
-                        alt=""></div>
+            <div id="dis"></div>
 
-                <div>
-                    <div>
-                        Scarlett 3 Seater Velvet Sofa In Royal Blue Colour - CasaCraft By Pepperfry</div>
-                    <div>
-                        36 Months' Warranty, 100% Genuine</div>
-                    <div>Delivery By
-                        Enter Your Pincode Above To Get These Details</div>
-                </div>
-
-                <div>
-                    <div>-</div>
-                    <div id="qty">1</div>
-                    <div>+</div>
-                </div>
-
-                <div id= "box1-last">
-                    <img src="https://cdn-icons.flaticon.com/png/128/2907/premium/2907762.png?token=exp=1636658424~hmac=1880cacf840595a781f143ca7146f40d" alt="">
-                    <img src="https://t4.ftcdn.net/jpg/01/25/83/03/240_F_125830316_m9Grtzjlt2I5Gp4qpDQq5G5BSXR5d9ZF.jpg" alt="">
-                </div>
-
-
-            </div>
         </div>
         <div id="box2">
             <div><img src="https://cdn-icons-png.flaticon.com/512/815/815252.png" alt="">
@@ -208,17 +185,27 @@
                 <div class="value">
                     <div>
                         <p>Cart value</p>
-                        <p>₹&nbsp; 4599
+                        <p id="cp">
                         </p>
                     </div>
                     <div>
-                        <p>Cart value</p>
-                        <p>₹&nbsp; 4599
+                        <p color="green">Retail Discount</p>
+                        <p id="pr" color="green">
                         </p>
                     </div>
                     <div>
-                        <p>Cart value</p>
-                        <p>₹&nbsp; 4599
+                        <p>Delivery (FREE)</p>
+                        <p>₹&nbsp; 0
+                        </p>
+                    </div>
+                    <div id="ass">
+                        <p>Assembly</p>
+                        <p>₹&nbsp; 449
+                        </p>
+                    </div>
+                    <div id="gi">
+                        <p>GiveIndia</p>
+                        <p>₹&nbsp; 99
                         </p>
                     </div>
 
@@ -229,7 +216,7 @@
                 <div class="value">
                     <div>
                         <h4>Total</h4>
-                        <h4>₹&nbsp; 4599
+                        <h4 id="total">
                         </h4>
                     </div>
                     <h5>
@@ -245,7 +232,7 @@
             </div>
 
             <div id="last">
-                <input type="checkbox" id="" name="checkbox">
+                <input type="checkbox" id="myCheck" name="checkbox" onclick="myFunction()">
                 <label for="">Contribute Rs.99 For COVID Relief Through GiveIndia.</label>
 
                 <br>
@@ -271,9 +258,221 @@
 <script>
 
 
-   // let sec = document.getElementById("in_cart");
-   // sec.innerText = `IN YOUR CART ( )`
+    let sec = document.getElementById("in_cart");
+    sec.innerText = `IN YOUR CART ( )`
 
+    let data = JSON.parse(localStorage.getItem("Pf_cart")) || [];
+
+    console.log(data);
+
+    var value = 0;
+    var discount = 0;
+    var assembly = 449;
+
+    let div1 = document.getElementById("dis");
+
+    data.forEach(function (el, i) {
+
+        var count = 1;
+        el.qty = 1;
+        console.log(el)
+
+        value += el.price;
+        discount += el.cutPrice
+        console.log(value, discount)
+
+        let item = document.createElement("div");
+        item.setAttribute("class", "item");
+
+        //--------------box-A-----------------------//
+
+        let div1A = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = el.img;
+        div1A.append(img);
+
+        //--------------------box-B-------------------//
+        let div1B = document.createElement("div");
+        let div1B1 = document.createElement("div");
+        div1B1.innerText = el.name;
+        let div1B2 = document.createElement("div");
+        div1B2.innerText = "36 Month's Warranty, 100% Genuine";
+        div1B2.style.color = "#f16521";
+
+        div1B.append(div1B1, div1B2)
+
+        //-------------------box C-----------------------//
+        let div1C = document.createElement("div");
+        let div1C1 = document.createElement("div");
+        div1C1.innerText = "-";
+        div1C1.style.cursor = "pointer";
+        div1C1.addEventListener("click", function (i) {
+            count--;
+            el.qty--;
+            if (count === 0 && el.qty === 0) { delItemsFromCart(i); item.innerHTML = null; }
+            div1C2.innerText = count;
+            price.innerText = `₹ ${count * el.price}`
+            cutprice.innerText = `₹ ${count * el.cutPrice}`;
+            value -= el.price;
+            discount -= el.cutPrice;
+            document.getElementById("cp").innerText = `₹ ${value}`;
+            document.getElementById("pr").innerText = `₹ ${discount}`;
+            document.getElementById("total").innerText = `₹ ${value + 449}`;
+            //-------
+            let Checkout_Data = {
+                Cart_Value: value,
+                Retail_Discount: discount,
+                Delivery_Free: 0,
+                Assembly: assembly,
+                Total: value + 449
+            };
+            localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data));
+            // console.log("minus",value);
+        });
+
+        let div1C3 = document.createElement("div");
+        div1C3.innerText = "+";
+        div1C3.style.cursor = "pointer";
+        div1C3.addEventListener("click", function () {
+            count++;
+            el.qty++;
+            div1C2.innerText = count;
+            price.innerText = `₹ ${count * el.price}`
+            cutprice.innerText = `₹ ${count * el.cutPrice}`;
+            value += el.price;
+            discount += el.cutPrice;
+            document.getElementById("cp").innerText = `₹ ${value}`;
+            document.getElementById("pr").innerText = `₹ ${discount}`;
+            document.getElementById("total").innerText = `₹ ${value + 449}`;
+
+            //-------
+            let Checkout_Data = {
+                Cart_Value: value,
+                Retail_Discount: discount,
+                Delivery_Free: 0,
+                Assembly: assembly,
+                Total: value + 449
+            };
+            localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data));
+
+
+        });
+
+        let div1C2 = document.createElement("div");
+        div1C2.innerText = count;
+        div1C2.style.textAlign = "center";
+        div1C2.style.paddingTop = "5px";
+        div1C2.style.width = "36px";
+        div1C2.style.height = "25px";
+        div1C2.style.border = "1px solid black";
+
+
+
+        let cutprice = document.createElement("div");
+        cutprice.innerText = `₹ ${el.cutPrice}`;
+        cutprice.style.color = "grey";
+        cutprice.style.textDecoration = "line-through";
+
+        let price = document.createElement("div");
+        price.innerText = `₹ ${el.price}`;
+        price.style.color = "#f16521";
+        price.style.fontWeight = 700;
+
+        div1C.append(div1C1, div1C2, div1C3);
+        div1C.append(cutprice, price);
+
+
+        //------------------box -D --------------------//
+
+        let div1D = document.createElement("div");
+        let img1 = document.createElement("img");
+        img1.src = "https://cdn-icons.flaticon.com/png/128/2907/premium/2907762.png?token=exp=1636658424~hmac=1880cacf840595a781f143ca7146f40d";
+        img1.addEventListener("click", function () {
+            el.qty = 0;
+            delItemsFromCart(i);
+            value -= count * el.price;
+            discount -= count * el.cutPrice;
+            document.getElementById("cp").innerText = `₹ ${value}`;
+            document.getElementById("pr").innerText = `₹ ${discount}`;
+            document.getElementById("total").innerText = `₹ ${value + 449}`;
+            item.innerHTML = null;
+
+            //----------
+            let Checkout_Data = {
+                Cart_Value: value,
+                Retail_Discount: discount,
+                Delivery_Free: 0,
+                Assembly: assembly,
+                Total: value + 449
+            };
+            localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data));
+        });
+
+        let img2 = document.createElement("img");
+        img2.src = "https://t4.ftcdn.net/jpg/01/25/83/03/240_F_125830316_m9Grtzjlt2I5Gp4qpDQq5G5BSXR5d9ZF.jpg";
+        img2.addEventListener("click", function () { img2.src = "https://t4.ftcdn.net/jpg/02/33/05/69/240_F_233056931_chB2vj6ThgrK2YRzKr9Ahg58XTw1K3Tn.jpg"; });
+
+        div1D.append(img1, img2)
+
+        item.append(div1A, div1B, div1C, div1D);
+        div1.append(item);
+
+        //-------------------------------------------------//
+
+    });
+
+    function delItemsFromCart(i) {
+        data.splice(i, 1)
+        localStorage.setItem("cartData", JSON.stringify(data))
+    }
+
+    console.log(data);
+    // ---------------Local storage set---------------------//
+
+    localStorage.setItem("cartData", JSON.stringify(data));
+
+
+    //---------------box 2---------------------//
+
+    document.getElementById("cp").innerText = `₹ ${value}`;
+    document.getElementById("pr").innerText = `₹ ${discount}`;
+    document.getElementById("total").innerText = `₹ ${value + 449}`;
+
+
+    //-----------------------checkbox function----------//
+
+    var div = document.getElementById("gi");
+    div.style.display = "none";
+    function myFunction() {
+        var checkBox = document.getElementById("myCheck");
+        var div = document.getElementById("gi");
+        if (checkBox.checked == true) {
+            div.style.display = "flex";
+            document.getElementById("total").innerText = `₹ ${value + 449 + 99}`
+        } else {
+            div.style.display = "none";
+            document.getElementById("total").innerText = `₹ ${value + 449 - 99}`
+        }
+    }
+
+
+    //--------------------CheckOut data-------------------//
+    // let Checkout_Data = {
+    //     Cart_Value: `₹ ${value}`,
+    //     Retail_Discount: `₹ ${discount}`,
+    //     Delivery_Free: `₹ ${0}`,
+    //     Assembly: `₹ ${assembly}`,
+    //     Total: `₹ ${value + 449}`
+    // }
+
+    let Checkout_Data = {
+        Cart_Value: value,
+        Retail_Discount: discount,
+        Delivery_Free: 0,
+        Assembly: assembly,
+        Total: value + 449
+    };
+    localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data));
 
 
 
