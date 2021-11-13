@@ -12,13 +12,6 @@ function get_username(){
    
 }
 
-function goto() {
-    alert`address page`;
-    window.location.href = "#";
-
-}
-
-
 let sec = document.getElementById("in_cart");
 sec.innerText = `IN YOUR CART`
 
@@ -61,7 +54,7 @@ data.forEach(function (el, i) {
     div1B2.innerText = "36 Month's Warranty, 100% Genuine";
     div1B2.style.color = "#f16521";
     let div1B3 = document.createElement("div");
-    div1B3.innerText = `Delivered by Thur 18th Nov.`;
+    div1B3.innerText = `Delivery by Thur 18th Nov.`;
     div1B3.style.color = "darkgrey"
 
     div1B.append(div1B1, div1B2, div1B3)
