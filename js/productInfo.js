@@ -4,13 +4,17 @@ let clicked = ProductInfo[ProductInfo.length - 1]
 let Nam = document.getElementById("NAME")
 Nam.textContent = clicked.name
 
-let Img = document.getElementById("sofaimg")
-    // let Img = document.createElement("img")
+let Img = document.getElementById("sofaimg");
 Img.src = clicked.img
 
 let Price = document.getElementById("mrp")
-Price.textContent = clicked.price
+Price.textContent = +clicked.price
 
+let brand = document.getElementById("BRAND")
+brand.textContent = clicked.brand
+
+let cutPrice = document.getElementById("cutprice")
+cutPrice.textContent = +clicked.cutPrice
 
 
 localStorage.setItem("ProductInfo", JSON.stringify(ProductInfo))
@@ -31,12 +35,19 @@ function ADDTOCART() {
 
     let Price = document.getElementById("mrp")
 
+    let brand = document.getElementById("BRAND")
+    let cutPrice = document.getElementById("cutprice")
+
+
 
     let productDetails = {
-        Name: Product_Name.textContent,
-        Image: Image.src,
-        Price: Price.textContent,
+        brand: brand.textContent,
+        cutPrice: +cutPrice.textContent,
+        name: Product_Name.textContent,
+        img: Image.src,
+        price: +Price.textContent,
     }
+
 
     productCart.push(productDetails)
     console.log(productCart)
