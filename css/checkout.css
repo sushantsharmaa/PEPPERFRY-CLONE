@@ -8,8 +8,6 @@ body{
     height: 5%;
 }
 #checkout {
-    width: 100%;
-    margin: auto;
     display: grid;
     grid-template-rows: 5% 1% 80% 10%;
 }
@@ -37,7 +35,7 @@ body{
     flex-direction: row;
 }
 #logo_size {
-    width: 140px;
+    width: 130px;
     height: 30px;
 }
 
@@ -49,14 +47,18 @@ body{
 }
 
 #header {
-    width: 1100px;
-    height: 10%;
-    display: grid;
-    grid-template-columns: 30% 50% 30%;
-    padding: 0 5px 1px 30px;
+    padding-top: 10px;
+    padding-left: 50px;
+    height: 70px;
+    display: flex;
 }
+
+#content{
+    margin-left: 320px;
+}
+
 #notification{
-    margin-left: 30px;
+    margin-left: 210px;
     width: 250px;
     display: grid;
     grid-template-columns: 70% 30%;
@@ -139,6 +141,11 @@ hr {
     color: #e96a19;
     font-size: 11px;
 }
+
+#footer{
+    margin-top: 50pxf;
+}
+
 .footer_img{
     width: 55px;
     height: 30px;
@@ -163,12 +170,12 @@ hr {
     border: 1px solid rgb(231, 231, 231);
     margin: 0 0 2px 0;
     display: grid;
-    grid-template-columns: 70% 10% 3%;
+    grid-template-columns: 82% 10% 3%;
     grid-gap: 5px;
 }
 
 #mid_left2 {
-    width: 90%;
+    width: 100%;
     margin-top: 0.5%;
     padding: 0 0 10px 0;
 }
@@ -183,7 +190,7 @@ hr {
     grid-template-columns: 68% 28% 4%;
 }
 .mid_left12{
-    margin: 1% 0 0 1%;
+    margin: 1.5% 0 0 1%;
 }
 #ship{
     margin-left: 1%;
@@ -217,7 +224,6 @@ hr {
 
 #footer1 {
     height: 100%;
-    /* background-color: violet; */
     padding: 0 0 0 15%;
 
 }
@@ -230,14 +236,10 @@ hr {
 
 #footer2 {
     height: 100px;
-    /* background-color: rgb(130, 137, 238); */
-
 }
 
 #footer3 {
     height: 100px;
-    /* background-color: rgb(238, 182, 130); */
-
 }
 #footer4{
     width: 100%;
@@ -348,7 +350,7 @@ form {
 .label2 {
     width: 200px;
     font-size: 17px;
-    padding-right: 85px;
+    padding-right: 70px;
     color: rgb(150, 150, 150);
 }
 
@@ -397,7 +399,7 @@ option{
 #pincode,
 #city,
 #city1{
-    margin-left: 5%;
+    margin-left: 2%;
 }
 #name,
 #moblie{
@@ -438,32 +440,32 @@ label{
 #city,#city1, #state1 {
     width: 220px;
     padding: 10px;
-    margin: 0 20% 0 22%;
+    margin: 0 20% 0 12%;
     border-radius: 2px;
     border: 1px solid rgb(185, 185, 185);
 }
 #state1,#state{
      width: 220px; 
-    margin-left: 65%;
+    margin-left: 62%;
 }
 #state1{
     width: 200px;
 }
 #country1,#country{
-    width: 59%;
+    width: 64%;
     margin-left: 220px;
     padding: 10px;
-    margin-left: 28%;
+    margin-left: 28.5%;
     border: 1px solid rgb(185, 185, 185);
 }
 #country{
-    width: 56%;
+    width: 62%;
 }
 #address1,#address,#pincode,#pincode1{
     width: 495px;
 }
 #mid_left2222 {
-    padding-left: 250px;
+    padding-left: 225px;
     display: grid;
     font-size: 14px;
     grid-template-columns: 5% 80%;
@@ -478,14 +480,14 @@ label{
     grid-gap: 1px;
 }
 
+
 button {
-    margin-left: 250px;
-    width: 200px;
+    margin-left: 230px;
+    width: 250px;
     height: 40px;
     border:  none;
     color: white;
     background-color: #f16521;
-
 }
 
 #city_part {
@@ -531,14 +533,8 @@ button {
 #address,#address1{
     height: 60px;
     border: 1px solid rgb(185, 185, 185);
-    /* padding: 10px 10px 10px 10px; */
 }
-/* .checkbox{
-    width: 20px;
-    height: 20px;
-    background-color: coral;
-    color: white;
-} */
+
 .below_checkbox{
     margin-top: 5px;
 }
@@ -577,7 +573,7 @@ input[type="checkbox"]:checked:after{
     display: block;
 }
 #name_in_notify{
-    margin: 10% 1% 0 0;
+    margin: 14% 1% 0 0;
 }
 #right_checkbox{
     display: grid;
@@ -608,6 +604,7 @@ a{
     
 }
 #mid_right{
+    width: 320px;
     padding: 5%;
     font-family: 'Fira Sans', sans-serif;
 }
@@ -615,7 +612,7 @@ a{
     display:grid;
     padding: 1.5%;
     font-size: 12px;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
 }
 .right_in1{
     text-align: right;
